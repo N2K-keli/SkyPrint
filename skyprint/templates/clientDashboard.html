@@ -1,0 +1,76 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/clientDashboard.css' %}">
+    <title>SkyPrint Place your order.</title>
+</head>
+<body>
+<header >
+    <h1>SkyPrint Form</h1>
+    <p>Quick and easy printing</p>
+</header>
+<main>
+
+<div class="formContainer">
+    <form action="" method="post" enctype="multipart/form-data">
+
+    <fieldset>
+        <legend>Personal Information</legend>
+        <label for=""> Name <input type="text" placeholder="paul emile" required></label> 
+        <label for="">Phone number <input type="tel" placeholder="6 123 456 789" required></label> 
+        <label for="">whatsapp Phone number if different from the above <input type="tel" placeholder="optional" l></label> 
+    </fieldset>
+    
+    <fieldset>
+        <legend>Document Uplaod</legend>
+        <label for="">Upload Document<input type="file" accept=".pdf,.doc,.docx,.xls,.xlsx" multiple required></label> 
+        <small> only documents less that 10MB</small>
+    </fieldset>
+
+    <fieldset>
+        <legend>Printing Specifications</legend>
+        <label for="copies">Number of copies<input type="number" name="" id="copies" min="1" max="100" value="1" required></label>
+        <select name="" id="" required>
+            <option value="">choose Printing type</option>
+            <option value="bw">Black and white</option>
+            <option value="color">color</option> 
+    
+        </select>
+        <label for="">double sided <input type="checkbox" name="" id="" ></label>
+        <label for="">binding row <input type="checkbox" name="" id="" ></label>
+    </fieldset>
+    
+
+
+    <fieldset>
+        <legend>additional info</legend>
+        <label for="">how urgent is the document</label>
+        <select name="" id="" >
+            <option value="very urgent"> very urgent [today] </option>
+            <option value="">urgent [in 2 days] </option>
+            <option value="flexible">flexible</option>
+        </select>
+        <label for="">any Speccific instrucctions</label>
+        <textarea name="" id="" rows="3" placeholder="Do wish to send any special request ?"></textarea>
+    </fieldset>
+
+
+    <div class="cost-display">
+        <p><strong>Estimated cost is <span>XXX</span></strong></p>
+        <button>submit</button>
+    </div>
+    
+    
+</form>
+
+</div> 
+</main>
+
+
+<script src="{% static 'js/clientDashboard.js' %}"></script>
+</body>
+</html>
